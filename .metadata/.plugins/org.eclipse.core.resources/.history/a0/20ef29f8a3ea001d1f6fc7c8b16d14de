@@ -1,0 +1,23 @@
+package com.example.spotify.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.spotify.entity.Music;
+import com.example.spotify.repository.MusicRepository;
+
+@Service
+public class MusicService {
+	
+	@Autowired
+	MusicRepository repo;
+	
+	public Music add(Music music) {
+		return repo.save(music);
+	}
+	
+	public void getMusic(int mid) {
+		repo.findById(mid);
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.example.spotify.dto;
+
+
+
+public class MusicDto {
+	
+	@NotNull(message = "Music should not be null")
+	@Size(min=3,max=10)
+	private String mName;
+	private String mMovieName;
+	
+	public MusicDto() {
+		
+	}
+	public String getmName() {
+		return mName;
+	}
+	public void setmName(String mName) {
+		this.mName = mName;
+	}
+	public String getmMovieName() {
+		return mMovieName;
+	}
+	public void setmMovieName(String mMovieName) {
+		this.mMovieName = mMovieName;
+	}
+	
+
+}

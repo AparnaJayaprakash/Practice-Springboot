@@ -1,0 +1,5 @@
+package com.example.spotify.dto;
+
+public class MusicDto {
+
+}

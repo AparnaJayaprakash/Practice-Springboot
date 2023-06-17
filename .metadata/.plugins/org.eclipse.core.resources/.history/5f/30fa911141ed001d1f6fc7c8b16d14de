@@ -1,0 +1,7 @@
+package com.example.user.dto;
+
+public class UserDto {
+	private String uname;
+	private int uage;
+
+}

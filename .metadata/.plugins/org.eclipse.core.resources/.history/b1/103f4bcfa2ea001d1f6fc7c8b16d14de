@@ -1,0 +1,31 @@
+package com.example.spotify.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.spotify.entity.Music;
+import com.example.spotify.repository.MusicRepository;
+import com.example.spotify.service.MusicService;
+
+@RestController
+@RequestMapping("/spotify")
+public class MusicController {
+	
+	//@Autowired
+	//MusicRepository repo;
+	
+	@Autowired
+	MusicService service;
+	
+	@PostMapping("/create")
+	public Music addMusic(@RequestBody Music music) {
+		
+		//return repo.save(music);
+		return service.add(music);
+		
+	}
+
+}

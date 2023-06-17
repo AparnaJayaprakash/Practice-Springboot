@@ -1,0 +1,12 @@
+package com.example.user.dto;
+
+public class UserDto {
+	@NotNull(message="User name should not be null")
+	@Size(min=4,max=50)
+	private String uname;
+	@NotNull(message="Age should not be null")
+	@Min(18)
+	@Max(60)
+	private int uage;
+
+}
